@@ -1,0 +1,61 @@
+﻿<Page x:Class="CSharpFinal.Pages.IntroductionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CSharpFinal.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Introduction Page"
+      ShowsNavigationUI="False">
+
+    <Grid Background="#6366f1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="500" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="235" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="1" Grid.Row="1" Padding="10" Background="#f1f5f9" BorderBrush="#1e1b4b" BorderThickness="0.45" CornerRadius="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Foreground="#1e293b" FontSize="18" FontWeight="Bold">
+                    Introduction
+                </Label>
+                <Border Grid.Column="0" Grid.Row="1" Margin="5,0,5,0" Height="3" Background="#94a3b8"></Border>
+                <TextBlock Grid.Column="0" Grid.Row="2" TextWrapping="Wrap" Padding="5" Foreground="#0f172a">
+                    This is the C# Final Task for the Object-Oriented Programming course (2024 Spring), lectured by prof. Donatas Dervinis and completed by stud. Daler Istamov.
+                </TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="3" TextWrapping="Wrap" Padding="5" Foreground="#0f172a">
+                    This program will help you create a password, which is going to get salted and then ecnrypted by Caesar's cypher. Finally, the password is getting cracked using brute-force.
+                </TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="4" TextWrapping="Wrap" Padding="5" Foreground="#0f172a">
+                    If you have any questions, please contact me by the following email: daler.istamov@sa.stud.vu.lt
+                </TextBlock>
+                <Button Grid.Column="0" Grid.Row="5" 
+                        Margin="5" Padding="20, 6"
+                        Click="OnClick"
+                        Content="Let's go!" />
+            </Grid>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" Direction="-90" RenderingBias="Quality" ShadowDepth="2" Color="#4338ca" />
+            </Border.Effect>
+        </Border>
+    </Grid>
+</Page>
